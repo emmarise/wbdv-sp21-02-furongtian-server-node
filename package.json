@@ -1,0 +1,14 @@
+{
+  "name": "wbdv-sp21-02-furongtian-server-node",
+  "version": "1.0.0",
+  "description": "node server for webdev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Furong Tian",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
