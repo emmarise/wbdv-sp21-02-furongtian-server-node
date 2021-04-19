@@ -1,5 +1,5 @@
 // TODO: review https://expressjs.com/
-const uri = process.env.MONGODB_URI;
+const uri = "mongodb+srv://emma:6tsy2c3UDm2DgZR@wbdvfurong.be9te.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";// process.env.MONGODB_URI;
 const express = require('express')
 const app = express()
 //
@@ -25,6 +25,7 @@ mongoose.connect(
 // configure CORS
 app.use(function (req, res, next) {
     // comma separated
+    // The problem is here?
     res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.header('Access-Control-Allow-Headers',
         'Content-Type, X-Requested-With, Origin');
@@ -44,5 +45,9 @@ require("./controllers/quizzes-controller")(app)
 require("./controllers/question-controller")(app)
 require('./controllers/users-controller')(app)
 
+app.get("/", (req, res) => {
+    res.send("Welcome, please use /api/xxx to access data")
+})
 
-app.listen(4000)
+app.listen(process.env.PORT || 4000)
+// app.listen(4000)
