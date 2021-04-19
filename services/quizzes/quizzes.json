@@ -1,11 +1,5 @@
 [
-  {"_id": "123",
-    "courseId": "ABC123",
-    "title": "Quiz 1"},
-  {"_id": "234",
-    "courseId": "ABC234",
-    "title": "Quiz 2"},
-  {"_id": "345",
-    "courseId": "ABC234",
-    "title": "Quiz 3"}
+  {"_id": "111", "title": "Quiz 111"},
+  {"_id": "222", "title": "Quiz 222"},
+  {"_id": "333", "title": "Quiz 333"}
 ]
