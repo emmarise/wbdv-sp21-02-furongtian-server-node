@@ -7,6 +7,7 @@ module.exports = (app) => {
         questionService.findAllQuestions()
             .then((questions) => {
                 res.send(questions)
+                // res.json(questions) ??
             })
     }
 
