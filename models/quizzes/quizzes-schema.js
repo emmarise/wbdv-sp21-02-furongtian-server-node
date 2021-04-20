@@ -11,16 +11,16 @@ const quizzesSchema = mongoose.Schema({
         ref: "QuestionsModel"
     }],
     // instead of storing refs, we can store actual objs
-    //
-    embeddedQuestions: [questionsSchema],
-    embeddedQuestions2: [{
-        title: String,
-        quizId: String,
-        question: String,
-        correct: String,
-        type: {type: String, enum: ["TRUE_FALSE", "MULTIPLE_CHOICE"]},
-        choices: [String]
-    }],
+
+    // embeddedQuestions: [questionsSchema],
+    // embeddedQuestions2: [{
+    //     title: String,
+    //     quizId: String,
+    //     question: String,
+    //     correct: String,
+    //     type: {type: String, enum: ["TRUE_FALSE", "MULTIPLE_CHOICE"]},
+    //     choices: [String]
+    // }],
 
 }, {collection: "quizzes"});
 

@@ -1,5 +1,6 @@
 // TODO: review https://expressjs.com/
-const uri = "mongodb+srv://emma:6tsy2c3UDm2DgZR@wbdvfurong.be9te.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";// process.env.MONGODB_URI;
+const uri = "mongodb+srv://emma:6tsy2c3UDm2DgZR@wbdvfurong.be9te.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+// process.env.MONGODB_URI;
 const express = require('express')
 const app = express()
 //
@@ -44,6 +45,8 @@ app.use(function (req, res, next) {
 require("./controllers/quizzes-controller")(app)
 require("./controllers/question-controller")(app)
 require('./controllers/users-controller')(app)
+require('./controllers/quiz-attempts-controller')(app)
+
 
 app.get("/", (req, res) => {
     res.send("Welcome, please use /api/xxx to access data")
